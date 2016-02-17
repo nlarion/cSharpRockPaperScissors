@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Friend!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <h1>Pick your weapon!</h1>
+    <form action="/" method="post">
+      <button type="submit" name="player2" value="Rock">Rock</button>
+    </form>
+    <form action="/" method="post">
+      <button type="submit" name="player2" value="Scissors">Scissors</button>
+    </form>
+    <form action="/" method="post">
+      <button type="submit" name="player2" value="Paper">Paper</button>
+    </form>
+    <h2>A list of things maybe:</h2>
+    <ul>
+      @{
+        if(Model!=null)
+        {
+
+            <li>@Model</li>
+
+        }
+      }
+    </ul>
+  </body>
+</html>

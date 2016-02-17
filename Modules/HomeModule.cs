@@ -11,12 +11,12 @@ namespace RockPaperScissors
     {
       Get["/"] = _ => View ["index.cshtml"];
       Post["/"] = _ => {
-        newGame.SetPlayer2(Request.Form["player2"]);
+        Game newGame = new Game(HttpContext.Current.Session["Player1Status"], Request.Form["player2"]);
         return View["index.cshtml", newGame.ReturnWinner()];
       };
       Post["/player2"] = _ => {
-      Game newGame = new Game(Request.Form["player1"], "");
-      return View["player2.cshtml", newGame];
+      HttpContext.Current.Session["Player1Status"] = Request.Form["player1"];
+      return View["player2.cshtml"];
       };
     }
   }
