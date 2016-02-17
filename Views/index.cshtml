@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Friend!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <h1>How much money do you need change for?</h1>
+    <form action="/" method="post">
+      <input type="double" name="input" value=""> Enter an amount
+      <button type="submit" name="button">PRESS THIS</button>
+    </form>
+    <h2>A list of words maybe:</h2>
+    <ul>
+      @{
+        if(Model!=null)
+        {
+          foreach(var entry in Model)
+          {
+            <li>@entry</li>
+          }
+        }
+      }
+    </ul>
+  </body>
+</html>
