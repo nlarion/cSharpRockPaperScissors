@@ -10,7 +10,7 @@ namespace RockPaperScissors
 //
   public class Game
   {
-    private string _player1;
+    private static string _player1;
     private string _player2;
 
 
@@ -21,7 +21,7 @@ namespace RockPaperScissors
       _player2 = player2;
 
     }
-    public string GetPlayer1()
+    public static string GetPlayer1()
     {
       return _player1;
     }
@@ -36,11 +36,11 @@ namespace RockPaperScissors
 
     public string ReturnWinner()
     {
-      if (this.GetPlayer1() == this.GetPlayer2())
+      if (_player1 == this.GetPlayer2())
       {
         return "Draw";
       }
-      else if (this.GetPlayer1() == "Rock")
+      else if (_player1 == "Rock")
       {
         if (this.GetPlayer2() == "Paper")
         {
@@ -51,7 +51,7 @@ namespace RockPaperScissors
           return "Player 1";
         }
       }
-      else if (this.GetPlayer1() == "Paper")
+      else if (_player1 == "Paper")
       {
         if (this.GetPlayer2() == "Scissors")
         {
