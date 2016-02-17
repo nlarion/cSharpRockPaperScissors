@@ -29,6 +29,10 @@ namespace RockPaperScissors
     {
       return _player2;
     }
+    public void SetPlayer2(string player2)
+    {
+      _player2 = player2;
+    }
 
     public string ReturnWinner()
     {
@@ -64,7 +68,7 @@ namespace RockPaperScissors
         {
           return "Player 2";
         }
-        else 
+        else
         {
           return "Player 1";
         }
