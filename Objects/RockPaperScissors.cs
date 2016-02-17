@@ -33,6 +33,12 @@ namespace RockPaperScissors
     {
       _player2 = player2;
     }
+    public static string GetAI()
+    {
+      string[] weaponArray = new string[]{"Rock", "Paper", "Scissors"};
+      Random random = new Random();
+      return weaponArray[random.Next(0, 2)];
+    }
 
     public string ReturnWinner()
     {

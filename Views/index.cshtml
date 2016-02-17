@@ -3,6 +3,7 @@
   <head>
     <title>Hello Friend!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
   </head>
   <body>
     <h1>Pick your weapon!</h1>
@@ -15,13 +16,13 @@
     <form action="/player2" method="post">
       <button type="submit" name="player1" value="Paper">Paper</button>
     </form>
-    <h2>A list of things maybe:</h2>
+
     <ul>
       @{
         if(Model!=null)
         {
 
-            <li>@Model</li>
+            <h2>WINNER IS: @Model</h2>
 
         }
       }

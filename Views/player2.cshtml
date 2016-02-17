@@ -3,9 +3,11 @@
   <head>
     <title>Hello Friend!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Content/css/styles.css'>
+
   </head>
   <body>
-    <h1>Pick your weapon!</h1>
+    <h1>Pick your weapon Player 2!</h1>
     <form action="/" method="post">
       <button type="submit" name="player2" value="Rock">Rock</button>
     </form>
@@ -15,16 +17,8 @@
     <form action="/" method="post">
       <button type="submit" name="player2" value="Paper">Paper</button>
     </form>
-    <h2>A list of things maybe:</h2>
-    <ul>
-      @{
-        if(Model!=null)
-        {
-
-            <li>@Model</li>
-
-        }
-      }
-    </ul>
+    <form action="/" method="post">
+      <button type="submit" name="player2" value="Random">Random</button>
+    </form>
   </body>
 </html>
